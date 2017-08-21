@@ -1,0 +1,452 @@
+<html><head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/styles/build/base.css">
+    <title>Test Objet JS</title>
+    </head>
+    <body>
+        <div id="contentComparateur">
+            <main id="sub_part_comparator">
+                <header>
+                    <h2 class="h2_mob">Comparateur Forfaits mobiles</h2> <br>
+                    <h2 class="h2_bur">Comparateur Forfaits mobiles</h2> <br>
+                    <div class="header_filtre">
+
+                        <!--          FILTRE-POUR-MOBILE-->
+                        <form name="" method="get" action="/comparator/fse" id="filterFormMobile" class="filtre external_form">
+                            <p class="pmob">Vos besoins mensuels</p>
+                            <br>
+                            <p class="prix_max">
+                                <span class="min_mob">Prix maximum</span>
+                                <span class="max_mob">20 €</span>
+                            </p>
+                            <input type="range" id="filterPriceMobile" name="priceEuro" min="1" max="100" value="20">
+                            <p class="prix_max">
+                                <span class="min_mob">Data web</span>
+                                <span class="max_mob">5 Go</span>
+                            </p>
+                            <input type="range" id="filterDataMobile" name="internetCapacity" min="1" max="100" value="5">
+                            <p class="prix_max">
+                                <span class="min_mob">Appels</span>
+                                <span class="max_mob">2 h</span>
+                            </p>
+                            <input type="range" id="filterCallMobile" name="callTime" min="1" max="20" value="2">
+                            <div class="hidden" id="advancedResearchMobile">
+                                <p class="prix_max">
+                                    <select id="operator" name="operator" class="selec"><option value="">Opérateurs</option><option value="1">NRJ Mobile</option><option value="2">SFR Mobile</option><option value="3">Bouygues Télécom</option><option value="4">Sosh</option></select>
+                                </p>
+                                <p class="prix_max">
+                                    <select id="options" name="options[]" class="selec" multiple="multiple"><option value="1">Internationnal</option><option value="2">Musique</option><option value="3">Télévision</option></select>
+                                </p>
+                                <p class="prix_max">
+                                    <select id="internetBandWidth" name="internetBandWidth" class="selec"><option value="">Réseaux</option><option value="3G">3G</option><option value="H+">H+</option><option value="4G">4G</option><option value="4G+">4G+</option></select>
+                                </p>
+                            </div>
+
+                            <br> <br>
+
+                            <!--  LE-LIEN-FILTRE-DU-HEADER -->
+                            <div class="lien-filtre">
+                                <a href="" onclick="document.querySelector('#advancedResearchMobile').classList.toggle('hidden'); return false;">
+                                    &gt;&gt;Recherche avancée
+                                </a>
+                                <br> <br>
+                                <button class="comparer">Comparer</button>
+                            </div>
+                            <input type="hidden" id="engagement" name="engagement" value="0"><input type="hidden" id="type" name="type" value="Forfait sans engagement">
+                        </form>
+
+                        <!-- FILTRE-POUR-BUREAU -->
+                        <p class="p_bur">Vos besoins mensuels</p>
+                        <form name="" method="get" action="/comparator/fse" id="filterFormDesktop" class="external_form">
+                            <div class="filtre_bur">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Prix maximum</span>
+                                        <span class="max">20 €</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterPriceDesktop" name="priceEuro" min="1" max="100" value="20">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Data web</span>
+                                        <span class="max">5 Go</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterDataDesktop" name="internetCapacity" min="1" max="100" value="5">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Appels</span>
+                                        <span class="max">2 h</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterCallDesktop" name="callTime" min="1" max="20" value="2">
+                                </div>
+                                <div class="filtre_bur_lien">
+                                    <span>2 offres réferencés</span>
+                                    <button class="comparer">Comparer</button>
+                                </div>
+                            </div>
+                            <div class="filtre_bur hidden" id="advancedResearchDesktop">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="operator" name="operator" class="selec1"><option value="">Opérateurs</option><option value="1">NRJ Mobile</option><option value="2">SFR Mobile</option><option value="3">Bouygues Télécom</option><option value="4">Sosh</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="options" name="options[]" class="selec1" multiple="multiple"><option value="1">Internationnal</option><option value="2">Musique</option><option value="3">Télévision</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="internetBandWidth" name="internetBandWidth" class="selec1"><option value="">Réseaux</option><option value="3G">3G</option><option value="H+">H+</option><option value="4G">4G</option><option value="4G+">4G+</option></select>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="filtre_bur">
+                                <div>
+                                    <a href="" onclick="document.querySelector('#advancedResearchDesktop').classList.toggle('hidden'); return false;">
+                                        &gt;&gt;Recherche avancée
+                                    </a>
+                                </div>
+                            </div>
+                            <input type="hidden" id="engagement" name="engagement" value="0"><input type="hidden" id="type" name="type" value="Forfait sans engagement">
+                        </form>
+
+
+                    </div>
+                </header>
+
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Premier test de pack</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                                PROMO
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/cdisclogo.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+                                SMS /
+                                100
+                                MMS
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                illimité en 4G
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/0410a0f0b811e5df366f88eb02c4a3b2.png" title="Internationnal">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bb7504b0327fb559397ba4a2d6e34d29.png" title="Musique à la demande">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>15 <sup>,99</sup> €</strong>
+                                <p>Par mois au lieu de 19.99 €</p>
+                            </div>
+                        </div>
+                        <a href="https://www.bouyguestelecom.fr">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Deuxieme test FSE</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                                PROMO
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/logo.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+
+                                2 h
+
+
+                                / mois
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                illimité en 4G+
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/0410a0f0b811e5df366f88eb02c4a3b2.png" title="Internationnal">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/fede8243ce080cad48820a8be004f5a5.png" title="Accès au catalogue des chaines TV du fournisseur">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>20 <sup>,0</sup> €</strong>
+                                <p>Par mois au lieu de 29.99 €</p>
+                            </div>
+                        </div>
+                        <a href="https://www.sosh.fr/info/internet-adsl">Plus d'infos</a>
+                    </div>
+                </div>
+
+                <!--            FORFAIT-HOME-BUREAU-->
+                <div class="forfait_mobil_bur">
+                    <table>
+                        <tbody><tr>
+                            <td class="forf">
+                                <span>Forfaits</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Opérateur</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Appels</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>SMS/MMS</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Internet</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="forf">
+                                <span>Options</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Prix</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="forf"><span>en savoir plus</span></td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Premier test de pack</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/cdisclogo.png">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+                                        SMS /
+                                        100
+                                        MMS
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité en 4G
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/0410a0f0b811e5df366f88eb02c4a3b2.png" title="Internationnal">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bb7504b0327fb559397ba4a2d6e34d29.png" title="Musique à la demande">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>15<sup>,99</sup> €</strong>
+                                        <p>Par mois au lieu de 19.99 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="https://www.bouyguestelecom.fr">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Deuxieme test FSE</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/logo.png">
+                                </td>
+                                <td>
+                                    <span>
+
+                                        2 h
+
+
+                                        / mois
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité en 4G+
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/0410a0f0b811e5df366f88eb02c4a3b2.png" title="Internationnal">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/fede8243ce080cad48820a8be004f5a5.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>20<sup>,0</sup> €</strong>
+                                        <p>Par mois au lieu de 29.99 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="https://www.sosh.fr/info/internet-adsl">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <div class="pagination_bloc">
+                        <span>Page 1 / 1</span>
+                        <div class="pagination">
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+                    priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');
+                    priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');
+
+                    dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');
+                    dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');
+                    dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');
+
+                    callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');
+                    callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');
+                    callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [
+                        {
+                            operator    : 'equal',
+                            opposition  : callDesktopRange.max,
+                            replacement : 'illimité',
+                            addUnit     : false
+                        }
+                    ]);
+
+                    priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+                    priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+                    priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');
+
+                    dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');
+                    dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');
+                    dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');
+
+                    callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');
+                    callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');
+                    callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [
+                        {
+                            operator    : 'equal',
+                            opposition  : callMobileRange.max,
+                            replacement : 'illimité',
+                            addUnit     : false
+                        }
+                    ]);
+                </script>
+            </main>
+
+        </div>
+        <script src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/js/build/cdiscount_front.js"></script>
+        <script type="text/javascript">
+            contentM = new ContentManager(
+                document.querySelector('#contentComparateur'),
+                'https://cdiscount-dvpt.kreatec.fr/comparator/fse',
+            ) ;
+        </script>      
+
+        <script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script><script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script><script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script><script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script><script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script><script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>            dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>                dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>            callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>            callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>                callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callDesktopRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>            dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>            dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>                dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>            callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>            callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>                callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>                    {<br>                        operator    : 'equal',<br>                        opposition  : callMobileRange.max,<br>                        replacement : 'illimité',<br>                        addUnit     : false<br>                    }<br>                ]);<br>    </script></body></html>
