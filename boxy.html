@@ -1,0 +1,274 @@
+<html>
+   <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<!--    <link rel="stylesheet" href="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/styles/build/base.css">-->
+   <link rel="stylesheet" href="styleyan.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Objet JS</title>
+    </head>
+    <body>
+        <div id="contentComparateur">
+            <main id="sub_part_comparator">
+                <header>
+                    <h2 class="h2_mob">Comparateur d'abonnements internet Box, ADSL, Fibre</h2> <br>
+                    <h2 class="h2_bur">Comparateur d'abonnements internet Box, ADSL, Fibre</h2> <br>
+                    <div class="header_filtre">
+                        <!--          FILTRE-POUR-MOBILE-->
+                        <form name="" method="get" action="/comparator/box" id="filterFormMobile" class="filtre external_form">
+                            <p class="pmob">Vos besoins mensuels</p>
+                            <br>
+                            <p class="prix_max">
+                                <span class="min_mob">Prix maximum</span>
+                                <span class="max_mob">20 €</span>
+                            </p>
+                            <input type="range" id="filterPriceMobile" name="priceEuro" min="1" max="100" value="20">
+                            <p class="prix_max">
+                                <select id="operator" name="operator" class="selec"><option value="">Opérateurs</option><option value="1">NRJ Mobile</option><option value="2">SFR Mobile</option><option value="3">Bouygues Télécom</option><option value="4">Sosh</option></select>
+                            </p>
+                            <p class="prix_max">
+                                <select id="options" name="options[]" class="selec" multiple="multiple"><option value="1">Internationnal</option><option value="2">Musique</option><option value="3">Télévision</option></select>
+                            </p>
+                            <div class="hidden" id="advancedResearchMobile">
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                            </div>
+
+                            <br> <br>
+
+                            <!--  LE-LIEN-FILTRE-DU-HEADER -->
+                            <div class="lien-filtre">
+                                <a href="" onclick="document.querySelector('#advancedResearchMobile').classList.toggle('hidden'); return false;">
+                                    &gt;&gt;Recherche avancée
+                                </a>
+                                <br> <br>
+                                <button class="comparer">Comparer</button>
+                            </div>
+                            <input type="hidden" id="type" name="type" value="Box">
+                        </form>
+
+                        <!-- FILTRE-POUR-BUREAU -->
+                        <p class="p_bur">Vos besoins mensuels</p>
+                        <form name="" method="get" action="/comparator/box" id="filterFormDesktop" class="external_form">
+                            <div class="filtre_bur">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Prix maximum</span>
+                                        <span class="max">20 €</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterPriceDesktop" name="priceEuro" min="1" max="100" value="20">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="operator" name="operator" class="selec1"><option value="">Opérateurs</option><option value="1">NRJ Mobile</option><option value="2">SFR Mobile</option><option value="3">Bouygues Télécom</option><option value="4">Sosh</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="options" name="options[]" class="selec1" multiple="multiple"><option value="1">Internationnal</option><option value="2">Musique</option><option value="3">Télévision</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_lien">
+                                    <span>2 offres réferencés</span>
+                                    <button class="comparer">Comparer</button>
+                                </div>
+                            </div>
+                            <div class="filtre_bur hidden" id="advancedResearchDesktop">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="filtre_bur">
+                                <div>
+                                    <a href="" onclick="document.querySelector('#advancedResearchDesktop').classList.toggle('hidden'); return false;">
+                                        &gt;&gt;Recherche avancée
+                                    </a>
+                                </div>
+                            </div>
+                            <input type="hidden" id="type" name="type" value="Box">
+                        </form>
+                    </div>
+                </header>
+
+               
+
+                <!--            FORFAIT-HOME-BUREAU-->
+                <div class="forfait_mobil_bur">
+                    <table>
+                        <tbody><tr>
+                            <td class="forf">
+                                <span>Forfaits</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Opérateur</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Appels</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Internet</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="forf">
+                                <span>Options</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="autr">
+                                <span>Prix</span>
+                                <a href=""><img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt=""></a>
+                                <a href=""><img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt=""></a>
+                            </td>
+                            <td class="forf"><span>en savoir plus</span></td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Deuxieme Box</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/logo.png">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        ADSL+
+                                        80 mb/s
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>17<sup>,99</sup> €</strong>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="https://www.sosh.fr/info/internet-adsl">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Ma super Box</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/cdisclogo.png">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        FIBRE
+                                        100 mb/s
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/0410a0f0b811e5df366f88eb02c4a3b2.png" title="Internationnal">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/fede8243ce080cad48820a8be004f5a5.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>19<sup>,99</sup> €</strong>
+                                        <p>Par mois au lieu de 24.99 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="https://www.bouyguestelecom.fr">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                    <div class="pagination_bloc">
+                        <span>Page 1 / 1</span>
+                        <div class="pagination">
+                        </div>
+                    </div>
+                </div>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"> </script>
+                <script>
+                    jQuery(document).ready(function(){
+                        $('input[type=range]').on('input', function(e){
+                            var min = e.target.min,
+                                max = e.target.max,
+                                val = e.target.value;
+
+                            $(e.target).css({
+                                'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+                            });
+                        }).trigger('input');
+                    });
+                </script>
+                <script type="text/javascript">
+                    priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+                    priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');
+                    priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');
+
+                    priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+                    priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+                    priceDesktopRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');
+                </script>
+            </main>
+
+        </div>
+        <script src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/js/build/cdiscount_front.js"></script>
+        <script type="text/javascript">
+            contentM = new ContentManager(
+                document.querySelector('#contentComparateur'),
+                'https://cdiscount-dvpt.kreatec.fr/comparator/box',
+            ) ;
+        </script>      
+
+        <script><br>            priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>            priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>                priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>            priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>            priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>                priceDesktopRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br>    </script></body></html>
